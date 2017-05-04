@@ -16,9 +16,9 @@ def GetOptions():
             "This tool iterates backwards through the USN Journal file to find the "\
             "last block ({} bytes in size) with no USN Records, then locates the first "\
             "relative v2 or v3 journal entry and outputs the rest of the journal to standard out.\n\n"\
-            "{} -j USN_JOURNAL > trimmed.usn".format(
+            "Example to output trimmed file:\n{} -j USN_JOURNAL > trimmed.usn".format(
                 BUFFER_SIZE,
-                sys.argv[0]
+                os.path.basename(sys.argv[0])
             )
     
     options = argparse.ArgumentParser(
